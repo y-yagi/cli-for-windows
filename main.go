@@ -27,6 +27,7 @@ func main() {
 }
 
 func onReady() {
+	systray.SetIcon(icon)
 	systray.SetTitle("My CLI")
 	systray.SetTooltip("My CLI")
 	mQuit := systray.AddMenuItem("Quit", "Quit")
