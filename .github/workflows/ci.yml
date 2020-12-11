@@ -20,3 +20,16 @@ jobs:
         go test ./...
       env:
         GO111MODULE: on
+
+    # Build new binaries per CI.
+    - name: Build binaries
+      uses: goreleaser/goreleaser-action@v2
+      with:
+        version: latest
+        args: release --snapshot --rm-dist
+
+    - name: Upload binaries
+      uses: actions/upload-artifact@v2
+      with:
+        name: binary
+        path: dist/cli-for-windows_windows_amd64
