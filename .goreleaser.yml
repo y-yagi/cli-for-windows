@@ -1,0 +1,15 @@
+builds:
+  - binary: "MY CLI"
+    goos:
+      - windows
+    ldflags: -H windowsgui
+    goarch:
+      - amd64
+      - 386
+archives:
+  -
+    format: zip
+release:
+  github:
+    owner: y-yagi
+    name: cli-for-windows
