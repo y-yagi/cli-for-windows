@@ -43,7 +43,7 @@ func (p *program) run() {
 			log.Fatal(err)
 		}
 	}(server)
-	systray.Run(onReady, onExit)
+	// systray.Run(onReady, onExit)
 }
 
 func (p *program) Stop(s service.Service) error {
